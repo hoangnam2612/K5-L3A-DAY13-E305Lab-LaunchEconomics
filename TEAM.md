@@ -12,12 +12,12 @@
 
 ## Thành viên
 
-| STT | Họ tên        | MSSV        | Email                     | GitHub       | Vai trò         |
-|----:|---------------|-------------|---------------------------|--------------|-----------------|
-|   1 | Hoàng Hải Nam | 2A202603694 | 26ai.namhh2@vinuni.edu.vn | hoangnam2612 | Người viết code |
-|   2 |               |             |                           |              |                 |
-|   3 |               |             |                           |              |                 |
-|   4 |               |             |                           |              |                 |
+| STT | Họ tên          | MSSV        | Email                     | GitHub       | Vai trò                          |
+|----:|-----------------|-------------|---------------------------|--------------|----------------------------------|
+|   1 | Hoàng Hải Nam   | 2A202603694 | 26ai.namhh2@vinuni.edu.vn | hoangnam2612 | Người viết code                  |
+|   2 | Phạm Thanh Tùng | 2A202603695 |                           |              | Người gắn nhãn 2, kiêm giữ hồ sơ |
+|   3 |                 |             |                           |              |                                  |
+|   4 |                 |             |                           |              |                                  |
 
 Bốn vai của lab:
 
@@ -40,16 +40,16 @@ Ví dụ: `report/team/20241234_NguyenVanAn.md`.
 
 Sao chép mục dưới đây cho từng thành viên.
 
-## HoVaTen-MSSV
+## PhamThanhTung-2A202603695
 
 ### Phần việc phụ trách
 
--
+- Người gắn nhãn 2, kiêm giữ hồ sơ.
 
 ### Đóng góp cụ thể
 
--
+- Gắn nhãn độc lập 20 ca lỗi của Nhiệm vụ C; tham gia đối chiếu và hoàn thiện bảng lỗi, quy tắc phân biệt và cách khắc phục.
 
 ### Bằng chứng
 
--
+- `report/team/bang_loi.md` (cột Nhãn người 2 và bảng khắc phục).
