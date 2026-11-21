@@ -2,19 +2,22 @@
 
 ## Thông tin nhóm
 
-- Tên nhóm:
-- Lớp: L3A hoặc L3B
-- Repo nhóm: `K5-L3A-DAY13-TenNhom-LaunchEconomics` (xem [SUBMISSION.md](SUBMISSION.md))
+- Tên nhóm: E305Lab
+- Lớp: L3A
+- Repo nhóm: K5-L3A-DAY13-E305Lab-LaunchEconomics
 - URL repo, nhánh nộp, commit chốt:
+  - URL: https://github.com/hoangnam2612/K5-L3A-DAY13-E305Lab-LaunchEconomics
+  - Nhánh nộp: main
+  - Commit chốt:
 
 ## Thành viên
 
-| STT | Họ tên | MSSV | Email | GitHub | Vai trò |
-| --: | ------ | ---- | ----- | ------ | ------- |
-|   1 |        |      |       |        |         |
-|   2 |        |      |       |        |         |
-|   3 |        |      |       |        |         |
-|   4 |        |      |       |        |         |
+| STT | Họ tên        | MSSV        | Email                     | GitHub       | Vai trò         |
+|----:|---------------|-------------|---------------------------|--------------|-----------------|
+|   1 | Hoàng Hải Nam | 2A202603694 | 26ai.namhh2@vinuni.edu.vn | hoangnam2612 | Người viết code |
+|   2 |               |             |                           |              |                 |
+|   3 |               |             |                           |              |                 |
+|   4 |               |             |                           |              |                 |
 
 Bốn vai của lab:
 
