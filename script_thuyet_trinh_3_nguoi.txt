@@ -1,0 +1,47 @@
+KỊCH BẢN TRÌNH BÀY 3 NGƯỜI — LOGIX-VN GATE 2A
+Thời lượng gợi ý: 6–7 phút
+
+NGƯỜI 1 — SLIDE 1 ĐẾN 3: BỐI CẢNH VÀ CHI PHÍ
+
+Slide 1 — Mở đầu
+Chào hội đồng. Nhóm chúng em trình bày hồ sơ Gate 2a cho trợ lý hoàn phí của LogiX-VN. Mục tiêu không phải quyết định triển khai đại trà, mà là quyết định có nên mở một pilot được kiểm soát hay không. Đề xuất của nhóm là Go có điều kiện, với phạm vi thu hẹp.
+
+Slide 2 — Bài toán
+Chúng em dùng 1.200 yêu cầu và 1.624 lần chạy agent từ đợt chạy thử. Bài toán xoay quanh bốn câu hỏi: agent có đáng chạy về kinh tế không; nhân viên có dùng gợi ý không; khi agent lỗi thì xử lý thế nào; và pilot có đủ thiết kế để ra quyết định hay không.
+
+Slide 3 — Chi phí thật
+Chi phí không chỉ là token. Khi cộng token, tool, thời gian xem lại và làm lại, tổng chi phí là 4.472 đồng cho mỗi việc thành công, trong đó các phút nhân viên là số simulated. Con số này cao gấp 16,3 lần hóa đơn token và tool chia số yêu cầu. Điểm chính là giờ nhân viên chiếm 92,5% chi phí, nên tối ưu token không phải đòn bẩy lớn nhất.
+
+NGƯỜI 2 — SLIDE 4 ĐẾN 6: PHẠM VI, ĐỘ NHẠY VÀ LỖI
+
+Slide 4 — Phạm vi pilot
+Chúng em chỉ chọn noi_dia và hang_nang cho pilot. noi_dia có chi phí 2.696 đồng, bằng 0,22 lần chi phí nhân viên tự làm; hang_nang là 8.221 đồng, bằng 0,69 lần. Ngược lại, quoc_te có chi phí 22.515 đồng, cao hơn 1,88 lần baseline và tỷ lệ thành công thấp. doi_tac dù rẻ hơn baseline nhưng có điều khoản riêng, nên cũng chưa đưa vào pilot.
+
+Slide 5 — Độ nhạy
+Ba yếu tố nhạy nhất đều liên quan đến nhân viên: số ca làm lại tăng gấp đôi làm CPS tăng 51,8%; xem lại gấp đôi tăng 40,7%; lương tăng 25% làm tăng 23,1%. Giá token gấp đôi chỉ tăng 5,6%. Vì vậy, pilot phải học cách giảm xem lại an toàn, thay vì chỉ tập trung giảm token.
+
+Giới hạn hai lần chạy cho chi phí cả hệ thống thấp nhất: 6,9 triệu đồng trên mẫu. Một lần chạy có CPS thấp hơn, nhưng đẩy nhiều việc sang nhân viên hơn.
+
+Slide 6 — Lỗi và khắc phục
+Nhóm phân loại 20 ca lỗi theo năm loại nguyên nhân gốc: do người dùng, hệ thống, ngữ cảnh, giới hạn hệ thống và lỗi ngầm. Hai người gắn nhãn độc lập đạt 85% đồng thuận.
+
+Ví dụ rủi ro nghiêm trọng là agent báo đã hoàn tiền dù API sổ cái lỗi. Cách phát hiện là đối soát theo giờ giữa tin nhắn hoàn tiền và bản ghi sổ cái ok cùng trace_id, với ngưỡng bằng 0. Nếu có lệch, hệ thống không được báo hoàn thành và phải chuyển nhân viên.
+
+NGƯỜI 3 — SLIDE 7 ĐẾN 9: PILOT, CHỈ SỐ VÀ QUYẾT ĐỊNH
+
+Slide 7 — Thiết kế pilot
+Pilot chia ngẫu nhiên theo nhân viên, 20 người dùng trợ lý và 20 người đối chứng, chạy song song. Nhóm chấp nhận đánh đổi: với 20 cụm mỗi nhánh, pilot đủ để thấy chênh lệch 6 điểm phần trăm, nhưng nếu tác động thật chỉ là 5 điểm thì power còn khoảng 0,64.
+
+Pilot có luật dừng rõ ràng: nếu tỷ lệ mở lại cao hơn đối chứng từ 2 điểm phần trăm, vượt 6%, hoặc có hoàn trùng liên tiếp, Giám đốc vận hành phải tắt trợ lý trong 30 phút.
+
+Slide 8 — Chỉ số và event
+Chỉ số chính trong đợt chạy thử là 82,83% yêu cầu đóng trong 24 giờ và không mở lại trong 7 ngày. Tỷ lệ bỏ qua gợi ý là 27,12%; tỷ lệ mở lại là 4,25%.
+
+Nhóm không tuyên bố agent đã nâng chỉ số vì dữ liệu hiện tại chưa có nhóm đối chứng. Chúng em ghi event có trace_id xuyên suốt từ yêu cầu, chạy agent, quyết định nhân viên, ghi sổ cái đến mở lại ticket để pilot đo được tác động thực.
+
+Slide 9 — Kết luận
+Nhóm đề xuất Go có điều kiện cho pilot chỉ gồm noi_dia và hang_nang.
+
+Bốn điều kiện trước khi bắt đầu là: sửa khóa chống trùng và đối soát sổ cái; chấp nhận chính thức mức chênh 6 điểm; bật đủ event có trace_id; và có kế hoạch giảm xem lại theo bậc.
+
+Câu hỏi nhóm muốn hội đồng phản biện là: nếu tuần đầu phải xem lại 100% gợi ý, pilot cần chứng minh điều gì để vẫn cho thấy giá trị kinh tế?
