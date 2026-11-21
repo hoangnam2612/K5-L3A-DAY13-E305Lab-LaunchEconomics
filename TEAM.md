@@ -40,6 +40,26 @@ Ví dụ: `report/team/20241234_NguyenVanAn.md`.
 
 Sao chép mục dưới đây cho từng thành viên.
 
+## HoangHaiNam-2A202603694
+
+### Phần việc phụ trách
+
+- Người viết code: viết và chạy `src/lab13.py`; điền bảng số liệu nhiệm vụ A, B và D1; cùng nhóm hoàn thiện nhiệm vụ E.
+
+### Đóng góp cụ thể
+
+- A1: ba hàm kinh tế của việc chạy lại, ba phép thử đáp án biết trước in ĐẠT.
+- A2, A3, A4: hàm `mo_hinh`; chi phí mỗi việc thành công 4.472 đ [simulated]; tách theo bốn loại yêu cầu; cộng chi phí cố định.
+- B1 đến B4: chín kịch bản độ nhạy, một cặp, giới hạn 1–3 lần chạy, xem lại 100% [simulated].
+- D1: cỡ mẫu theo ba cách chia và `report/team/pilot_plan.yaml` (chia theo nhân viên 20 + 20).
+- E: ba chỉ số tính thử, danh sách event, rủi ro kinh tế, hồ sơ launch v0.
+
+### Bằng chứng
+
+- `src/lab13.py`, `report/team/bang_chi_phi.md`, `report/team/pilot_plan.yaml`, `report/team/chi_so.md`, `report/team/ho_so_launch_v0.md`.
+- Commit: `1e49339`, `07481cc`, `c59ee3e`, `0da7550`.
+- Báo cáo cá nhân: `report/team/2A202603694_HoangHaiNam.md`.
+
 ## PhamThanhTung-2A202603695
 
 ### Phần việc phụ trách
