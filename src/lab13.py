@@ -161,3 +161,35 @@ if __name__ == '__main__':
     # TODO CP4 · Nhiệm vụ D: cỡ mẫu.
     #   from statsmodels.stats.proportion import proportion_effectsize
     #   from statsmodels.stats.power import NormalIndPower
+    # ---------- D1 · Cỡ mẫu theo các cách chia ----------
+    from statistics import NormalDist
+    from statsmodels.stats.proportion import proportion_effectsize
+    from statsmodels.stats.power import NormalIndPower
+
+    def co_mau(p1, p2, alpha=0.05, power=0.8):
+        za, zb = NormalDist().inv_cdf(1 - alpha / 2), NormalDist().inv_cdf(power)
+        pb = (p1 + p2) / 2
+        return math.ceil((za * math.sqrt(2 * pb * (1 - pb))
+                          + zb * math.sqrt(p1 * (1 - p1) + p2 * (1 - p2))) ** 2 / (p2 - p1) ** 2)
+
+    ICC = 0.02
+    n_a = co_mau(0.70, 0.75)
+    print(f'\nD1 · a) Chia theo yêu cầu: {n_a:,} yêu cầu mỗi nhóm')
+    de_b = 1 + (75 - 1) * ICC
+    n_b = math.ceil(n_a * de_b)
+    nv_b = math.ceil(n_b / 75)
+    print(f'D1 · b) m=75: DE={de_b:.2f}, n={n_b:,.0f} mỗi nhóm, {nv_b} người mỗi nhóm, '
+          f'tổng {2 * nv_b} so với 40 nhân viên -> {"đủ" if 2 * nv_b <= 40 else "KHÔNG đủ người"}')
+    print(f'D1 · c) 20 nhân viên mỗi nhóm: tối đa {20 / ICC:,.0f} < {n_a:,} -> '
+          f'{"đạt" if 20 / ICC >= n_a else "KHÔNG đạt"}')
+    print(f'D1 · d) 6 depot mỗi nhóm: tối đa {6 / ICC:,.0f}')
+    n6 = co_mau(0.70, 0.76)
+    m_e = math.ceil(n6 * (1 - ICC) / (20 - n6 * ICC))   # 20m/(1+(m-1)ICC) >= n6
+    print(f'D1 · e) Mức chênh 6 điểm: {n6} mỗi nhóm; 20 người mỗi nhóm cần m >= {m_e} yêu cầu/người '
+          f'(DE={1 + (m_e - 1) * ICC:.2f})')
+    pw = NormalIndPower().power(proportion_effectsize(0.75, 0.70), nobs1=n6 / 1, alpha=0.05)
+    print(f'D1 · power khi chỉ chạy {n6} mỗi nhóm mà tác động thật là 5 điểm: {pw:.2f}')
+    # D3 · tỉ lệ mở lại hiện tại, để chốt ngưỡng an toàn
+    pv_ = reqs[reqs['loai'].isin(['noi_dia', 'hang_nang'])]
+    print(f'D3 · mo_lai_trong_7_ngay: toàn mẫu {reqs.mo_lai_trong_7_ngay.mean():.2%} '
+          f'({reqs.mo_lai_trong_7_ngay.sum()}/{len(reqs)}), noi_dia+hang_nang {pv_.mo_lai_trong_7_ngay.mean():.2%}')
