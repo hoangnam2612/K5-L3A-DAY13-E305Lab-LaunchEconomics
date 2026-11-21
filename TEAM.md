@@ -3,7 +3,7 @@
 ## Thông tin nhóm
 
 - Tên nhóm:
-- Lớp: L3A hoặc L3B
+- Lớp: L3A
 - Repo nhóm: `K5-L3A-DAY13-TenNhom-LaunchEconomics` (xem [SUBMISSION.md](SUBMISSION.md))
 - URL repo, nhánh nộp, commit chốt:
 
@@ -11,7 +11,7 @@
 
 | STT | Họ tên | MSSV | Email | GitHub | Vai trò |
 | --: | ------ | ---- | ----- | ------ | ------- |
-|   1 |        |      |       |        |         |
+|   1 | Phạm Thanh Tùng | 2A202603695 |       |        | Người gắn nhãn 2, kiêm giữ hồ sơ |
 |   2 |        |      |       |        |         |
 |   3 |        |      |       |        |         |
 |   4 |        |      |       |        |         |
@@ -37,16 +37,16 @@ Ví dụ: `report/team/20241234_NguyenVanAn.md`.
 
 Sao chép mục dưới đây cho từng thành viên.
 
-## HoVaTen-MSSV
+## PhamThanhTung-2A202603695
 
 ### Phần việc phụ trách
 
--
+- Người gắn nhãn 2, kiêm giữ hồ sơ.
 
 ### Đóng góp cụ thể
 
--
+- Gắn nhãn độc lập 20 ca lỗi của Nhiệm vụ C; tham gia đối chiếu và hoàn thiện bảng lỗi, quy tắc phân biệt và cách khắc phục.
 
 ### Bằng chứng
 
--
+- `report/team/bang_loi.md` (cột Nhãn người 2 và bảng khắc phục).
