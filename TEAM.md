@@ -16,8 +16,7 @@
 |----:|-----------------|-------------|---------------------------|--------------|----------------------------------|
 |   1 | Hoàng Hải Nam   | 2A202603694 | 26ai.namhh2@vinuni.edu.vn | hoangnam2612 | Người viết code                  |
 |   2 | Phạm Thanh Tùng | 2A202603695 |                           |              | Người gắn nhãn 2, kiêm giữ hồ sơ |
-|   3 |                 |             |                           |              |                                  |
-|   4 |                 |             |                           |              |                                  |
+|   3 |Nguyễn Đức Trọng |2A202603644 |trongducnd050905@gmail.|https://github.com/fishiousrend05|Người gắn nhãn 1|   4 |                 |             |                           |              |                                  |
 
 Bốn vai của lab:
 
@@ -53,3 +52,4 @@ Sao chép mục dưới đây cho từng thành viên.
 ### Bằng chứng
 
 - `report/team/bang_loi.md` (cột Nhãn người 2 và bảng khắc phục).
+
